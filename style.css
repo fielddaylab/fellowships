@@ -42,6 +42,11 @@ body {
   margin: 40px;
 }
 
+.jumbotron-arrow-p a {
+  text-decoration: none;
+  color: rgb(46,49,224);
+}
+
 .jumbotron-arrow-p img {
   width: 45px;
 }
@@ -107,10 +112,26 @@ body {
   margin: 50px;
 }
 
-.what-makes-text {
+.what-makes-content-short, .what-makes-content-long {
   max-width: 600px;
-  text-align: left;
   margin: 0 10px;
+}
+
+.what-makes-text {
+  text-align: left;
+}
+
+.what-makes-quote {
+  font-size: 18px;
+  margin: 30px 0;
+}
+
+body.switch-full-content .what-makes-content-short {
+  display: none;
+}
+
+body:not(.switch-full-content) .what-makes-content-long {
+  display: none;
 }
 
 .teachers-words {
