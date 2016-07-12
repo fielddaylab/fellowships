@@ -226,3 +226,119 @@ body {
 .schedule-arrow {
   margin: 25px;
 }
+
+.have-time {
+  text-align: center;
+  padding: 50px 150px;
+  background-color: rgb(247,246,246);
+}
+
+.have-time-decoration img {
+  width: 120px;
+}
+
+.have-time h2 {
+  font-weight: normal;
+  font-size: 20px;
+  color: rgb(46,49,224);
+}
+
+.checkerboard-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.checkerboard-square {
+  flex: 1;
+  padding: 90px;
+}
+
+.checkerboard-square h2 {
+  color: rgb(46,49,224);
+}
+
+.checkerboard-square a {
+  color: rgb(46,49,224);
+  text-decoration: none;
+}
+
+.checkerboard-image {
+  background-image: url("assets/checkerboard-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body.switch-standards .creds-accreditation {
+  display: none;
+}
+
+body:not(.switch-standards) .creds-standards {
+  display: none;
+}
+
+.creds {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.creds-buttons {
+  margin-top: 30px;
+}
+
+.creds-button {
+  border: 2px solid rgb(46,49,224);
+  background-color: white;
+  color: rgb(46,49,224);
+  padding: 15px;
+  width: 150px;
+  display: inline-block;
+  margin: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+body.switch-standards .creds-button-standards, body:not(.switch-standards) .creds-button-accreditation {
+  background-color: rgb(46,49,224);
+  color: white;
+}
+
+.creds-section {
+  max-width: 700px;
+  margin-bottom: 30px;
+}
+
+.creds-section p, .creds-section ul {
+  text-align: left;
+}
+
+.fdl-footer {
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  padding-top: 30px;
+}
+
+.fdl-footer-desert {
+  width: 100%;
+  height: 0;
+  padding-top: 200px;
+  overflow: hidden;
+  background-image: url("assets/desert-with-text.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 20px;
+}
+
+.fdl-footer-logos {
+  width: 100%;
+  background-color: #311dda;
+}
+
+.fdl-footer-logo {
+  height: 60px;
+  margin: 20px;
+}
