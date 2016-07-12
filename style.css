@@ -9,6 +9,8 @@ body {
 .jumbotron {
   background-image: url("assets/jumbotron-bg.jpg");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 0;
   margin: 0;
   text-align: center;
@@ -72,4 +74,82 @@ body {
   display: inline-block;
   background-color: white;
   border-radius: 999px;
+}
+
+.what-makes {
+  text-align: center;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.what-makes-header {
+  background-image: url("assets/woods-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: rgb(46,49,224);
+  align-self: stretch;
+}
+
+.what-makes-header img {
+  width: 100px;
+  margin: 50px;
+}
+
+.what-makes-text {
+  max-width: 600px;
+  text-align: left;
+  margin: 0 10px;
+}
+
+.teachers-words {
+  text-align: center;
+  background-color: rgb(247,246,246);
+  color: rgb(96,96,96);
+}
+
+.teachers-words-decoration {
+  width: 100px;
+  margin-top: 30px;
+}
+
+.teachers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.teacher {
+  margin: 25px;
+}
+
+.teacher-photo img {
+  width: 120px;
+}
+
+.teacher-job {
+  color: rgb(46,49,224);
+}
+
+.teacher-sep {
+  display: inline-block;
+  width: 50px;
+  height: 5px;
+  background-color: rgb(46,49,224);
+  margin-bottom: 3px;
+}
+
+.squire-quote {
+  padding: 150px;
+  color: white;
+  background-image: url("assets/squire-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.squire-quote-text {
+  font-size: 20px;
 }
