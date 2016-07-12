@@ -55,6 +55,15 @@ body {
   display: inline-block;
 }
 
+.button-register-now-white {
+  text-decoration: none;
+  background-color: white;
+  color: rgb(46,49,224);
+  border-radius: 999px;
+  padding: 12px 35px;
+  display: inline-block;
+}
+
 .bullet-row {
   display: flex;
   flex-direction: row;
@@ -123,6 +132,7 @@ body {
 
 .teacher {
   margin: 25px;
+  flex: 1;
 }
 
 .teacher-photo img {
@@ -151,5 +161,68 @@ body {
 }
 
 .squire-quote-text {
+  font-size: 25px;
+}
+
+.investment {
+  text-align: center;
+  background: linear-gradient(to right, rgb(76,135,215) 0%, rgb(46,49,224) 100%);
+  padding: 50px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.investment-decoration img {
+  width: 120px;
+}
+
+.investment > p {
+  max-width: 800px;
+}
+
+.investment-arrows {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.investment-arrows > div {
+  flex: 1;
+}
+
+.investment-arrows h2 {
   font-size: 20px;
+  font-weight: normal;
+}
+
+.investment-arrows ul {
+  text-align: left;
+}
+
+.investment-arrows li {
+  padding-bottom: 15px;
+}
+
+.dont-wait {
+  text-align: center;
+  padding: 135px;
+  background-image: url("assets/dont-wait-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dont-wait-text {
+  color: white;
+  font-size: 25px;
+}
+
+.dont-wait-number {
+  font-size: 30px;
+}
+
+.schedule-arrow {
+  margin: 25px;
 }
