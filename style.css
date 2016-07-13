@@ -178,6 +178,10 @@ p.slant {
   text-align: left;
 }
 
+.blue-text {
+  color: rgb(46,49,224);
+}
+
 .what-makes-quote {
   font-size: 18px;
   margin: 30px 0;
