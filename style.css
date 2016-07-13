@@ -453,12 +453,6 @@ body.switch-standards .creds-button-standards, body:not(.switch-standards) .cred
   margin: 20px;
 }
 
-.contact-fd {
-  width: 100%;
-  text-align: center;
-  padding:40px;
-}
-
 .contact-fd a {
   text-decoration: none;
 }
