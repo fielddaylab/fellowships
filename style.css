@@ -84,6 +84,8 @@ p.slant {
   background-color: white;
   color: rgb(46,49,224);
   padding: 50px 90px;
+  width: 500px;
+  max-width: 100%;
 }
 
 .jumbotron-content p {
