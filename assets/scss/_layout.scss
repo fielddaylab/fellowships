@@ -295,7 +295,8 @@ body:not(.switch-full-content) .what-makes-content-long {
 }
 
 .squire-quote-text {
-  font-size: 25px;
+  font-size: 20px;
+  line-height: 28px;
 }
 
 .investment {
@@ -321,6 +322,7 @@ body:not(.switch-full-content) .what-makes-content-long {
   justify-content: space-around;
   margin-top: 3vw;
   text-align:left;
+  position: relative;
 }
 
 .investment-arrows > div {
@@ -337,7 +339,6 @@ body:not(.switch-full-content) .what-makes-content-long {
     margin: 0 auto;
     display: inline-block;
   }
-
 }
 
 .investment-arrows ul {
@@ -354,7 +355,10 @@ body:not(.switch-full-content) .what-makes-content-long {
 }
 
 .investment-arrows img {
-  width: 90px;
+  width:8vw;
+  margin: 0 auto;
+  display: inline-block;
+  margin-bottom: 20px;
 }
 
 .dont-wait {

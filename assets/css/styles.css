@@ -2149,7 +2149,8 @@ body:not(.switch-full-content) .what-makes-content-long {
       padding: 10vw; } }
 
 .squire-quote-text {
-  font-size: 25px; }
+  font-size: 20px;
+  line-height: 28px; }
 
 .investment {
   text-align: center;
@@ -2170,7 +2171,8 @@ body:not(.switch-full-content) .what-makes-content-long {
   flex-direction: row;
   justify-content: space-around;
   margin-top: 3vw;
-  text-align: left; }
+  text-align: left;
+  position: relative; }
 
 .investment-arrows > div {
   flex: 1; }
@@ -2195,7 +2197,10 @@ body:not(.switch-full-content) .what-makes-content-long {
   padding: 3vw; }
 
 .investment-arrows img {
-  width: 90px; }
+  width: 8vw;
+  margin: 0 auto;
+  display: inline-block;
+  margin-bottom: 20px; }
 
 .dont-wait {
   text-align: center;
