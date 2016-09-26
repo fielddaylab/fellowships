@@ -1918,7 +1918,8 @@ body {
   position: fixed;
   transform: translateY(-75px);
   border-bottom: 2px solid #f7f6f6;
-  transition: all .4s ease-in-out; }
+  transition: all .4s ease-in-out;
+  z-index: 1000; }
 
 .stickynav.fixed {
   transform: translateY(0px); }
@@ -1934,13 +1935,15 @@ body {
   margin: 12px 10px 0px 0px; }
 
 h2, h3 {
-  letter-spacing: 3px; }
+  letter-spacing: 3px;
+  font-size: 25px;
+  margin-bottom: 20px; }
 
 p {
   font-weight: 300;
-  font-size: 18px;
   letter-spacing: 2px;
-  line-height: 32px; }
+  font-size: 15px;
+  line-height: 25px; }
 
 p.emph {
   font-weight: 400; }
@@ -1990,6 +1993,7 @@ p.slant {
   color: #2e31e0;
   padding: 2vw 4vw;
   width: 35vw;
+  height: 100%;
   max-width: 100%;
   position: relative;
   top: 50%;
@@ -2166,25 +2170,23 @@ body:not(.switch-full-content) .what-makes-content-long {
 .investment > p {
   max-width: 800px; }
 
-.investment-arrows {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-top: 3vw;
-  text-align: left;
-  position: relative; }
-
 .investment-arrows > div {
   flex: 1; }
 
 .investment-arrows h2 {
-  font-size: 20px;
+  font-size: 16px;
   margin-bottom: 40px;
-  text-align: center; }
+  text-align: center;
+  text-transform: uppercase; }
 
 .investment-arrows .bullet {
   margin: 0 auto;
   display: inline-block; }
+
+.investment-arrows .row {
+  max-width: 1200px; }
+  .investment-arrows .row div {
+    padding: 3vw 5vw; }
 
 .investment-arrows ul {
   text-align: left; }
@@ -2194,13 +2196,14 @@ body:not(.switch-full-content) .what-makes-content-long {
   font-size: 18px; }
 
 .investment-arrows div {
-  padding: 3vw; }
+  padding: 1.5vw; }
 
 .investment-arrows img {
-  width: 8vw;
+  width: 6vw;
+  min-width: 60px;
   margin: 0 auto;
-  display: inline-block;
-  margin-bottom: 20px; }
+  display: block;
+  margin-bottom: 40px; }
 
 .dont-wait {
   text-align: center;
@@ -2235,7 +2238,6 @@ body:not(.switch-full-content) .what-makes-content-long {
 
 .have-time h2 {
   margin: 3vw;
-  font-size: 20px;
   color: #2e31e0; }
 
 .checkerboard-row {
@@ -2285,11 +2287,13 @@ body:not(.switch-standards) .creds-standards {
   background-color: white;
   color: #2e31e0;
   padding: 15px 25px;
-  width: 200px;
+  width: auto;
   display: inline-block;
   margin: 10px;
   text-decoration: none;
-  border-radius: 5px; }
+  border-radius: 30px; }
+  .creds-button:hover {
+    background-color: #2e31e0; }
 
 body.switch-standards .creds-button-standards, body:not(.switch-standards) .creds-button-accreditation {
   background-color: #2e31e0;
