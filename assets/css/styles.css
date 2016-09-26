@@ -56,7 +56,6 @@
   border-radius: 99px;
   text-align: center;
   text-decoration: none;
-  margin-right: 15px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s; }
   @media only screen and (max-width: 1065px) {
@@ -1928,6 +1927,9 @@ body {
   float: left;
   width: 150px;
   margin: 20px 0px 0px 20px; }
+  @media only screen and (max-width: 768px) {
+    .stickynav .brand {
+      width: 120px; } }
 
 .stickynav .button {
   float: right;
@@ -1944,6 +1946,9 @@ p {
   letter-spacing: 2px;
   font-size: 15px;
   line-height: 25px; }
+  @media only screen and (max-width: 1065px) {
+    p {
+      font-size: 12px; } }
 
 p.emph {
   font-weight: 400; }
@@ -1981,12 +1986,18 @@ p.slant {
     .jumbotron {
       height: auto; } }
 
+.jumbotron p {
+  font-size: inherit; }
+
 .jumbotron-decoration-p {
   margin: 20px;
   width: 50px; }
 
 .jumbotron-decoration-p img {
   width: 100px; }
+  @media only screen and (max-width: 768px) {
+    .jumbotron-decoration-p img {
+      width: 60px; } }
 
 .jumbotron-content {
   background-color: white;
@@ -1994,37 +2005,50 @@ p.slant {
   padding: 2vw 4vw;
   width: 35vw;
   height: 100%;
-  max-width: 100%;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%); }
+  max-width: 100%; }
+  @media only screen and (min-width: 1066px) {
+    .jumbotron-content {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); } }
   @media only screen and (max-width: 1065px) {
     .jumbotron-content {
       width: 100vw;
       transform: translateY(0%);
       top: 0;
       padding: 30px;
-      padding: 0; } }
+      padding: 0;
+      height: auto; } }
+  @media only screen and (max-width: 768px) {
+    .jumbotron-content h2 {
+      font-size: 14px;
+      font-weight: 600; } }
 
 .jumbotron-content p {
   margin-bottom: 30px;
-  font-size: 15px;
   line-height: 25px; }
-  @media only screen and (max-width: 1065px) {
+  @media only screen and (max-width: 768px) {
     .jumbotron-content p {
-      padding: 0px 20px; } }
+      padding: 0px 20px;
+      font-size: 12px; } }
 
 .jumbotron-logo {
   height: 50px;
   display: block;
   margin: auto; }
+  @media only screen and (max-width: 768px) {
+    .jumbotron-logo {
+      height: 30px; } }
 
 .jumbotron-arrow-p {
   margin: 40px;
   display: inline-block;
   margin-bottom: 20px; }
+  @media only screen and (max-width: 768px) {
+    .jumbotron-arrow-p {
+      margin: 20px; } }
 
 .jumbotron-arrow-p a {
   text-decoration: none;

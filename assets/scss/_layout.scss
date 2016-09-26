@@ -38,6 +38,9 @@ body {
   float: left;
   width: 150px;
   margin: 20px 0px 0px 20px;
+  @media #{$break-sm} {
+    width: 120px;
+  }
 }
 
 .stickynav .button {
@@ -53,6 +56,9 @@ p {
   letter-spacing: 2px;
   font-size: 15px;
   line-height: 25px;
+  @media #{$break-md} {
+    font-size: 12px;
+  }
 }
 
 p.emph {
@@ -98,6 +104,10 @@ p.slant {
   }
 }
 
+.jumbotron p {
+  font-size: inherit;
+}
+
 .jumbotron-decoration-p {
   margin: 20px;
   width: 50px;
@@ -105,31 +115,43 @@ p.slant {
 
 .jumbotron-decoration-p img {
   width: 100px;
+  @media #{$break-sm}  {
+    width: 60px;
+  }
 }
 
 .jumbotron-content {
+  @media #{$break-lg} {
+    @include vertical-align;
+  }
   background-color: white;
   color: rgb(46,49,224);
   padding: 2vw 4vw;
   width: 35vw;
   height: 100%;
   max-width: 100%;
-  @include vertical-align;
   @media #{$break-md} {
     width: 100vw;
     transform: translateY(0%);
     top:0;
     padding: 30px;
     padding: 0;
+    height: auto;
+  }
+  h2 {
+    @media #{$break-sm} {
+      font-size: 14px;
+      font-weight: 600;
+    }
   }
 }
 
 .jumbotron-content p {
   margin-bottom: 30px;
-  font-size: 15px;
   line-height: 25px;
-  @media #{$break-md} {
+  @media #{$break-sm} {
   padding: 0px 20px;
+  font-size: 12px;
   }
 }
 
@@ -137,12 +159,18 @@ p.slant {
   height: 50px;
   display: block;
   margin: auto;
+  @media #{$break-sm} {
+    height: 30px;
+  }
 }
 
 .jumbotron-arrow-p {
   margin: 40px;
   display: inline-block;
   margin-bottom: 20px;
+  @media #{$break-sm} {
+    margin: 20px;
+  }
 }
 
 .jumbotron-arrow-p a {
