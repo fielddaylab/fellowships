@@ -231,7 +231,7 @@
 
 <!-- Gridder content -->
 <div id="game1" class="gridder-content">
-  <div class="row">
+  <div class="row game-inner game1-inner">
     <div class="col-md-8 game-expanded">
       <h3>Game on Fellowship</h3>
       <p>Want to learn more about game-based learning and how to critique games designed for middle school science classrooms? Want to help us identify new topics for science games? Field Day is looking for educators interested in using science games with students in their classroom... Learn more While the fellowship will focus on the Yard Games, which are built for middle school science, we’ll also explore educational games more broadly.</p>
@@ -246,7 +246,7 @@
 </div>
 
 <div id="game2" class="gridder-content">
-  <div class="row">
+  <div class="row game-inner game2-inner">
     <div class="col-md-8 game-expanded">
       <h3>Games for Humanity Fellowship.</h3>
       <p>Instead of having students write final papers or produce powerpoint presentations, they can design games to demonstrate their understanding. Teachers will learn how to integrate game design into their social studies curriculum. In addition to doing research and exploring concepts aligned with academic standards, as part of the production process, students will develop new design and technology skills. Teachers will help identify the specific social studies content their project will cover, past projects focused on historic events, environmental issues, global studies and current news storie</p>
@@ -264,7 +264,7 @@
 </div>
 
 <div id="game3" class="gridder-content">
-  <div class="row">
+  <div class="row game-inner game3-inner">
     <div class="col-md-8 game-expanded">
       <h3>Material Science Game Design Fellowship</h3>
       <p>Teachers know the classroom better than anyone else. So what would happen if we paired them up with leading researchers, education scholars and a game development studio to make new online games to teach science? Thanks to our partnership with the University of Wisconsin Materials Research Science and Engineering Center, we are going to get to find out! In this fellowship, 6 middle-school science educators will work as part of a crack team to conceptualize, design and test 2 new educational games that will join the YARD GAMES collection.</p>
@@ -282,7 +282,7 @@
 </div>
 
 <div id="game4" class="gridder-content">
-  <div class="row">
+  <div class="row game-inner game4-inner">
     <div class="col-md-8 game-expanded">
       <h3>Material Science Research Experience Fellowship</h3>
       <p>Science teachers! Do you want to put on a lab coat and join a research lab at a top research institution for a summer? Yes. We thought so! In this fellowship, we partner with the University of Wisconsin Materials Research Science and Engineering Center “Research Experiences for Teachers (RET)” program to find leading science teachers who want to create a digital or hands-on laboratory activity for their students, inspired by their research experience.</p>
@@ -298,7 +298,7 @@
 </div>
 
 <div id="game5" class="gridder-content">
-  <div class="row">
+  <div class="row game-inner game5-inner">
     <div class="col-md-8 game-expanded">
       <h3>WDLC Game Design Course Fellowship.</h3>
       <p>Two teachers, Dave Strong and Dan Rhode, paired up with Field Day to develop 2 new units to teach game design to high school students as part of a collaboration with DPI and WDLC.</p>
@@ -311,7 +311,7 @@
 </div>
 
 <div id="game6" class="gridder-content">
-  <div class="row">
+  <div class="row game-inner game6-inner">
     <div class="col-md-8 game-expanded">
       <h3>Student Game Design Fellowship</h3>
       <p>In the Spring of 2016, two teachers at Deforest Middle School partnered with Field Day to pioneer a new social science assignment using digital game making. In the end, 250 middle school students created mobile video games to represent their research about contested issues on the African continent. </p>
@@ -325,7 +325,7 @@
 </div>
 
 <div id="game7" class="gridder-content">
-  <div class="row">
+  <div class="row game-inner game7-inner">
     <div class="col-md-8 game-expanded">
       <h3>Science Mini Games Fellowship</h3>
       <p>During the spring and summer of 2016, 9 science educators worked together with our design team to develop 9 new online games, the YARD GAMES. These incredible educators offered their real-world expertise to help us understand and test what would really work in the middle-school classrooms and it worked. The games are free and open, being used by over 700 students a day nationally.</p>
@@ -341,7 +341,7 @@
 </div>
 
 <div id="game8" class="gridder-content">
-  <div class="row">
+  <div class="row game-inner game8-inner">
     <div class="col-md-8 game-expanded">
       <h3>Field Research Fellowship</h3>
       <p>For several years our team has been exploring the role mobile devices can play in learning outside the classroom. Working with our three Field Research fellows, we were able to refine the Siftr.org tool and learn how to better inegrate field research activities into formal and informal educational setttings.</p>
@@ -565,6 +565,50 @@
 <script>
 $(function() {
 
+    var whichOpen = function(){
+        var shown = $('.gridder-expanded-content .game-inner');
+        if (shown.length === 0) return null;
+        for (var i = 1; i <= 8; i++) {
+            if (shown.hasClass('game' + i + '-inner')) {
+                return i;
+            }
+        }
+        return null;
+    };
+
+    var readHash = function(){
+        var hash = location.hash.replace( /^#/, '' );
+        var shouldOpen;
+        if (hash === 'material-science') {
+            shouldOpen = 3;
+        } else {
+            shouldOpen = parseInt(hash);
+            if (!shouldOpen || shouldOpen < 1 || 8 < shouldOpen) shouldOpen = null;
+        }
+        var open = whichOpen();
+        if (open !== shouldOpen) {
+            if (open !== null) {
+                $("[data-griddercontent='#game" + open + "']").click();
+            }
+            setTimeout(function(){
+                if (shouldOpen !== null) {
+                    $("[data-griddercontent='#game" + shouldOpen + "']").click();
+                }
+            }, 500);
+        }
+    };
+
+    var writeHash = function(){
+        var open = whichOpen();
+        if (open === null) {
+            window.history.pushState(null, '', '#');
+        } else if (open === 3) {
+            window.history.pushState(null, '', '#material-science');
+        } else {
+            window.history.pushState(null, '', '#' + open);
+        }
+    };
+
     // Call Gridder
     $('.gridder').gridderExpander({
         scroll: true,
@@ -577,15 +621,21 @@ $(function() {
         prevText: "Previous",               // Previous button text
         closeText: "Close",                 // Close button text
         onStart: function(){
+            readHash();
             //Gridder Inititialized
         },
         onContent: function(){
+            writeHash();
             //Gridder Content Loaded
         },
         onClosed: function(){
+            writeHash();
             //Gridder Closed
         }
     });
+
+    // this is broken, but not too important for now
+    // $(window).on('hashchange', readHash);
 });
 
 var  mn = $(".stickynav");
