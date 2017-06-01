@@ -233,7 +233,7 @@
 
 <!-- Gridder content -->
 <div id="game9" class="gridder-content">
-  <div class="row game-inner game2-inner">
+  <div class="row game-inner game9-inner">
     <div class="col-md-8 game-expanded">
       <h3>Wisconsin State Capitol Game Design Fellowship</h3>
       <p>We are looking for a select group of 3rd-5th grade teachers to join forces with Field Day and Wisconsin Public Television to build a new game about the Wisconsin State Capitol. You bring your classroom expertise and we’ll bring our design team. Together we’ll produce something that will get used by teachers and students throughout the state.</p>
@@ -578,7 +578,7 @@ $(function() {
     var whichOpen = function(){
         var shown = $('.gridder-expanded-content .game-inner');
         if (shown.length === 0) return null;
-        for (var i = 1; i <= 8; i++) {
+        for (var i = 1; i <= 50; i++) {
             if (shown.hasClass('game' + i + '-inner')) {
                 return i;
             }
@@ -593,7 +593,7 @@ $(function() {
             shouldOpen = 3;
         } else {
             shouldOpen = parseInt(hash);
-            if (!shouldOpen || shouldOpen < 1 || 8 < shouldOpen) shouldOpen = null;
+            if (!shouldOpen || shouldOpen < 1 || 50 < shouldOpen) shouldOpen = null;
         }
         var open = whichOpen();
         if (open !== shouldOpen) {
