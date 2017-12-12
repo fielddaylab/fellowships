@@ -2249,21 +2249,6 @@ body:not(.switch-full-content) .what-makes-content-long {
 .schedule-arrow {
   margin: 25px; }
 
-.have-time {
-  text-align: center;
-  background-color: #f7f6f6; }
-
-.have-time > p {
-  max-width: 800px;
-  margin: 0 auto; }
-
-.have-time-decoration img {
-  width: 120px; }
-
-.have-time h2 {
-  margin: 3vw;
-  color: #2e31e0; }
-
 .checkerboard-row {
   display: flex;
   flex-direction: row; }
@@ -2290,6 +2275,26 @@ body:not(.switch-full-content) .what-makes-content-long {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
+
+.have-time {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f7f6f6; }
+
+.have-time > ul {
+  text-align: left; }
+
+.have-time > p {
+  max-width: 800px; }
+
+.have-time-decoration img {
+  width: 120px; }
+
+.have-time h2 {
+  margin: 3vw;
+  color: #2e31e0; }
 
 body.switch-standards .creds-accreditation {
   display: none; }

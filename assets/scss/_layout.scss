@@ -414,25 +414,6 @@ body:not(.switch-full-content) .what-makes-content-long {
   margin: 25px;
 }
 
-.have-time {
-  text-align: center;
-  background-color: rgb(247,246,246);
-}
-
-.have-time>p {
-  max-width:800px;
-  margin: 0 auto;
-}
-
-.have-time-decoration img {
-  width: 120px;
-}
-
-.have-time h2 {
-  margin: 3vw;
-  color: rgb(46,49,224);
-}
-
 .checkerboard-row {
   display: flex;
   flex-direction: row;
@@ -464,6 +445,31 @@ body:not(.switch-full-content) .what-makes-content-long {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.have-time {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(247,246,246);
+}
+
+.have-time>ul {
+  text-align: left;
+}
+
+.have-time>p {
+  max-width:800px;
+}
+
+.have-time-decoration img {
+  width: 120px;
+}
+
+.have-time h2 {
+  margin: 3vw;
+  color: rgb(46,49,224);
 }
 
 body.switch-standards .creds-accreditation {
